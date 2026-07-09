@@ -1,4 +1,4 @@
-/* Core Resets */
+/* Style Reset Definitions */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
 }
 
-/* Task 2: Navbar Styling */
+/* Navbar Interface Design */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -45,16 +45,23 @@ body {
     color: #00adb5;
 }
 
+/* Search Actions Shell Styling */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
 .search-container input {
     padding: 0.5rem;
     border: none;
     border-radius: 4px;
-    width: 200px;
+    width: 220px;
+    font-size: 0.9rem;
 }
 
 .search-container button {
     padding: 0.5rem 1rem;
-    margin-left: 0.3rem;
+    margin-left: 0.4rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -67,11 +74,11 @@ body {
 #btnClear { background: #393e46; color: white; }
 #btnClear:hover { background: #2b2f35; }
 
-/* Task 3: Home Page & Background Setup */
+/* Backdrop Content Viewport */
 .hero-section {
     position: relative;
     height: calc(100vh - 70px);
-    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
     display: flex;
     padding: 3rem 5%;
     gap: 2rem;
@@ -79,7 +86,7 @@ body {
 
 .hero-content {
     flex: 1;
-    max-width: 500px;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -104,7 +111,7 @@ body {
     text-decoration: none;
 }
 
-/* Task 8: Dynamic Results Container (Grid Layout) */
+/* Dynamic Query Grid Framework (Guarantees clean presentation alignment) */
 .result-grid {
     flex: 1.5;
     display: grid;
@@ -112,15 +119,17 @@ body {
     gap: 1.5rem;
     overflow-y: auto;
     padding-right: 10px;
+    max-height: 85vh;
 }
 
 .card {
     background: rgba(30, 30, 36, 0.95);
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
     display: flex;
     flex-direction: column;
+    height: fit-content;
 }
 
 .card img {
@@ -134,7 +143,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    flex-grow: 1;
 }
 
 .card-time {
@@ -143,7 +151,7 @@ body {
     font-weight: bold;
 }
 
-/* Contextual Subpages Content (About/Contact) */
+/* General Layout Context Elements */
 .container {
     max-width: 900px;
     margin: 3rem auto;
@@ -173,7 +181,6 @@ body {
 
 .role { color: #00adb5; font-size: 0.9rem; margin-top: 0.2rem; }
 
-/* Contact Form Specifics */
 .form-group { margin-bottom: 1.2rem; }
 .form-group label { display: block; margin-bottom: 0.4rem; font-weight: bold;}
 .form-group input, .form-group textarea {
@@ -181,4 +188,11 @@ body {
 }
 .btn-submit {
     background: #00adb5; color: white; border: none; padding: 0.75rem 2rem; border-radius: 4px; font-weight: bold; cursor: pointer;
+}
+.error-msg {
+    grid-column: 1 / -1;
+    background: rgba(255, 0, 0, 0.1);
+    border-left: 4px solid #ff4a4a;
+    padding: 1rem;
+    border-radius: 4px;
 }

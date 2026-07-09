@@ -1,81 +1,72 @@
 {
-    "countries": [
-      {
-        "id": 1,
-        "name": "Australia",
-        "cities": [
-          {
-            "name": "Sydney, Australia",
-            "imageUrl": "enter_your_image_for_sydney.jpg",
-            "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
-          },
-          {
-            "name": "Melbourne, Australia",
-            "imageUrl": "enter_your_image_for_melbourne.jpg",
-            "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "name": "Japan",
-        "cities": [
-          {
-            "name": "Tokyo, Japan",
-            "imageUrl": "enter_your_image_for_tokyo.jpg",
-            "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
-          },
-          {
-            "name": "Kyoto, Japan",
-            "imageUrl": "enter_your_image_for_kyoto.jpg",
-            "description": "Known for its historic temples, gardens, and traditional tea houses."
-          }
-        ]
-      },
-      {
-        "id": 3,
-        "name": "Brazil",
-        "cities": [
-          {
-            "name": "Rio de Janeiro, Brazil",
-            "imageUrl": "enter_your_image_for_rio.jpg",
-            "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
-          },
-          {
-            "name": "São Paulo, Brazil",
-            "imageUrl": "enter_your_image_for_sao-paulo.jpg",
-            "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
-          }
-        ]
-      }
-    ],
-    "temples": [
-      {
-        "id": 1,
-        "name": "Angkor Wat, Cambodia",
-        "imageUrl": "enter_your_image_for_angkor-wat.jpg",
-        "description": "A UNESCO World Heritage site and the largest religious monument in the world."
-      },
-      {
-        "id": 2,
-        "name": "Taj Mahal, India",
-        "imageUrl": "enter_your_image_for_taj-mahal.jpg",
-        "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
-      }
-    ],
-    "beaches": [
-      {
-        "id": 1,
-        "name": "Bora Bora, French Polynesia",
-        "imageUrl": "enter_your_image_for_bora-bora.jpg",
-        "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
-      },
-      {
-        "id": 2,
-        "name": "Copacabana Beach, Brazil",
-        "imageUrl": "enter_your_image_for_copacabana.jpg",
-        "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
-      }
-    ]
-  }
-  
+  "countries": [
+    {
+      "id": 1,
+      "name": "Australia",
+      "cities": [
+        {
+          "name": "Sydney, Australia",
+          "imageUrl": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?auto=format&fit=crop&w=500&q=80",
+          "description": "A spectacular coastal city housing the iconic Sydney Opera House and pristine structural bay views.",
+          "timeZone": "Australia/Sydney"
+        },
+        {
+          "name": "Melbourne, Australia",
+          "imageUrl": "https://images.unsplash.com/photo-1514395462725-fb4566210144?auto=format&fit=crop&w=500&q=80",
+          "description": "The cultural capital of Australia, famous for its winding graffiti alleyways and exceptional coffee.",
+          "timeZone": "Australia/Melbourne"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Japan",
+      "cities": [
+        {
+          "name": "Tokyo, Japan",
+          "imageUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=500&q=80",
+          "description": "A neo-futuristic metropolis where towering neon skyscrapers blend beautifully alongside timeless local shrines.",
+          "timeZone": "Asia/Tokyo"
+        },
+        {
+          "name": "Kyoto, Japan",
+          "imageUrl": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=500&q=80",
+          "description": "The heart of imperial Japan, renowned for historic wooden temples and manicured rock gardens.",
+          "timeZone": "Asia/Tokyo"
+        }
+      ]
+    }
+  ],
+  "temples": [
+    {
+      "id": 1,
+      "name": "Angkor Wat, Cambodia",
+      "imageUrl": "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=500&q=80",
+      "description": "A massive architectural complex displaying beautiful historical remnants of traditional Southeast Asian temples.",
+      "timeZone": "Asia/Phnom_Penh"
+    },
+    {
+      "id": 2,
+      "name": "Kinkaku-ji, Japan",
+      "imageUrl": "https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=500&q=80",
+      "description": "The Zen Buddhist Golden Pavilion standing prominently above tranquil reflective waters in Kyoto.",
+      "timeZone": "Asia/Tokyo"
+    }
+  ],
+  "beaches": [
+    {
+      "id": 1,
+      "name": "Bora Bora, French Polynesia",
+      "imageUrl": "https://images.unsplash.com/photo-1535262412227-85541e910204?auto=format&fit=crop&w=500&q=80",
+      "description": "Indulge in crystal clear turquoise lagoons and signature luxury overwater bungalow escapes.",
+      "timeZone": "Pacific/Tahiti"
+    },
+    {
+      "id": 2,
+      "name": "Copacabana, Brazil",
+      "imageUrl": "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=500&q=80",
+      "description": "A lively, world-famous high-energy beach stretching continuously alongside vibrant Rio de Janeiro.",
+      "timeZone": "America/Sao_Paulo"
+    }
+  ]
+}

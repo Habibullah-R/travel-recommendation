@@ -1,63 +1,64 @@
-// DOM Element Declarations
+// Target UI Node Bindings
 const btnSearch = document.getElementById('btnSearch');
 const btnClear = document.getElementById('btnClear');
 const searchInput = document.getElementById('searchInput');
 const resultContainer = document.getElementById('resultContainer');
 
-// Task 6: Fetch JSON Data Implementation
+// Search Execution Module Logic
 function searchDestinations() {
     const keyword = searchInput.value.toLowerCase().trim();
-    resultContainer.innerHTML = ''; // Reset container layout initially
+    resultContainer.innerHTML = ''; // Wipe display frame area
 
     if (!keyword) {
-        alert("Please enter a search keyword.");
+        alert("Please enter a valid search term.");
         return;
     }
 
     fetch('travel_recommendation_api.json')
         .then(response => {
-            if (!response.ok) {
-                throw new Error("Network response encountered an issue loading local API data.");
-            }
+            if (!response.ok) throw new Error("API data resource could not be loaded.");
             return response.json();
         })
         .then(data => {
-            console.log("Fetched API Data successfully:", data); // Required validation log
+            console.log("JSON payload loaded:", data);
             
             let matchedItems = [];
 
-            // Task 7: Keyword variations processing logic
+            // Task 7: String validation matching conditions 
             if (keyword === 'beach' || keyword === 'beaches') {
                 matchedItems = data.beaches;
             } else if (keyword === 'temple' || keyword === 'temples') {
                 matchedItems = data.temples;
+            } else if (keyword === 'country' || keyword === 'countries') {
+                // Task 8 expansion logic: flatten and map all cities across every country definition package
+                matchedItems = data.countries.flatMap(country => country.cities);
             } else {
-                // Country tracking match verification
+                // Direct specific keyword structural tracking fallback configuration
                 const foundCountry = data.countries.find(c => c.name.toLowerCase() === keyword);
                 if (foundCountry) {
                     matchedItems = foundCountry.cities;
                 }
             }
 
-            // Task 8: UI Generation and Element Generation
+            // Render Output Array Context Array Elements
             if (matchedItems.length > 0) {
                 displayResults(matchedItems);
             } else {
-                resultContainer.innerHTML = `<p class="error-msg">No results found matching "${searchInput.value}". Try searching "beach", "temple", or "Australia".</p>`;
+                resultContainer.innerHTML = `<p class="error-msg">No structured results found for "${searchInput.value}". Please input "beach", "temple", or "country".</p>`;
             }
         })
-        .catch(error => {
-            console.error("Error executing fetch routine:", error);
-            resultContainer.innerHTML = `<p class="error-msg">Error retrieving destination data profiles.</p>`;
+        .catch(err => {
+            console.error("Pipeline failure executing process handling routine:", err);
+            resultContainer.innerHTML = `<p class="error-msg">Critical runtime anomaly loading server assets.</p>`;
         });
 }
 
-// Helper block to safely parse and append elements dynamically
+// Result Component Node Compiler
 function displayResults(items) {
     items.forEach(item => {
-        // Task 10: Optional dynamic local target time logic conversion
+        // Task 10: Clock formatting profile tracking conversion implementation
         const timeOptions = { timeZone: item.timeZone, hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
-        const localTimeStr = new Date().toLocaleTimeString('en-US', timeOptions);
+        const convertedLocalTime = new Date().toLocaleTimeString('en-US', timeOptions);
 
         const card = document.createElement('div');
         card.classList.add('card');
@@ -66,7 +67,7 @@ function displayResults(items) {
             <img src="${item.imageUrl}" alt="${item.name}">
             <div class="card-body">
                 <h3>${item.name}</h3>
-                <p class="card-time">🕒 Local Time: ${localTimeStr}</p>
+                <p class="card-time">🕒 Local Time: ${convertedLocalTime}</p>
                 <p>${item.description}</p>
             </div>
         `;
@@ -74,13 +75,13 @@ function displayResults(items) {
     });
 }
 
-// Task 9: Clear functionality configuration logic
+// Reset Form & View Interface Properties
 function clearResults() {
     searchInput.value = '';
     resultContainer.innerHTML = '';
-    console.log("Search filters and display parameters cleared smoothly.");
+    console.log("Display state tracking properties successfully cleared.");
 }
 
-// Event bindings assignment
+// Event Handler Attachment Hooks
 btnSearch.addEventListener('click', searchDestinations);
 btnClear.addEventListener('click', clearResults);
