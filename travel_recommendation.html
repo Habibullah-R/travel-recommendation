@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderlust Guides</title>
+    <link rel="stylesheet" href="travel_recommendation_style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">🎒 Wanderlust</div>
+        <ul class="nav-links">
+            <li><a href="travel_recommendation.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Enter beach, temple, or country...">
+            <button id="btnSearch">Search</button>
+            <button id="btnClear">Reset</button>
+        </div>
+    </nav>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1>Explore The World</h1>
+            <p>Welcome to Wanderlust Guides! Your ultimate companion for discovering pristine beaches, ancient historic temples, and vibrant, unforgettable country excursions. Where will your curiosity take you next?</p>
+            
+            <div class="social-icons">
+                <a href="#">🌐</a>
+                <a href="#">📸</a>
+                <a href="#">🐦</a>
+            </div>
+        </div>
+
+        <div id="resultContainer" class="result-grid"></div>
+    </main>
+
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>
